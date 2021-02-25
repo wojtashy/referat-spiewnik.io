@@ -1,0 +1,152 @@
+html {
+  height: 100%;
+  width: 100%;
+  font-family: roboto;
+  color: #caf0f8;
+}
+body {
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: #0077b6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
+footer {
+  width: 100%;
+  background-color: #0096c7;
+  text-align: center;
+  height: 70px;
+  position: relative;
+  margin-top: -70px;
+}
+
+.burger {
+  width: 20vw;
+  padding: 10px;
+  display: inline-block;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  outline: none;
+}
+.menu {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: fixed;
+  left: -80vw;
+  transition-duration: 0.5s;
+  z-index: 2;
+}
+nav {
+  background-color: #03045e;
+  height: 100%;
+  width: 80vw;
+}
+ul {
+  list-style: none;
+}
+nav ul li a:visited {
+  color: #caf0f8;
+}
+nav ul li {
+  margin-top: 30px;
+}
+a {
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+.burger_box {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  position: relative;
+}
+.burger_box_content {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.burger_box_content::before,
+.burger_box_content::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  transition-duration: 0.3s;
+}
+.burger_box_content::before {
+  top: -13px;
+}
+.burger_box_content::after {
+  top: 13px;
+}
+.burger--active .burger_box_content {
+  background-color: transparent;
+}
+.burger--active .burger_box_content::before {
+  transform: translateY(13px) rotate(45deg);
+}
+.burger--active .burger_box_content::after {
+  transform: translateY(-13px) rotate(-45deg);
+}
+.container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.container div p {
+  height: 100%;
+  float: right;
+}
+.song {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.separator {
+  height: 70px;
+}
+.container ul li a:visited {
+  color: #caf0f8;
+}
+.container a {
+  color: #caf0f8;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+.fontChange {
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  z-index: 1;
+}
+.fontChange button {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  outline: none;
+  background-color: rgb(255, 255, 172);
+}
